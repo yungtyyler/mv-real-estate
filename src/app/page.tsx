@@ -45,7 +45,7 @@ export default function Home() {
               key={i}
               className="rounded-lg shadow-xl p-6 flex flex-col gap-8 justify-between bg-white w-full h-full"
             >
-              <p className="font-semibold text-[1.1em]">"{testimonial.message}"</p>
+              <p className="font-semibold text-[1.1em]">&quot;{testimonial.message}&quot;</p>
               <div className="flex items-center gap-4">
                 <Image
                   src={testimonial.image}
