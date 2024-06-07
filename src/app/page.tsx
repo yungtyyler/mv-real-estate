@@ -1,4 +1,4 @@
-import { CustomButton } from '@/components';
+import { CustomButton, SlideShow } from '@/components';
 import { Testimonial } from '@/types';
 import Image from 'next/image';
 
@@ -36,14 +36,14 @@ export default function Home() {
       </div>
 
       {/* Testimonials */}
-      <div className="flex flex-col items-center justify-center gap-4 my-16">
+      <div className="section__container">
         <h2 className="text-[2em] font-semibold self-start">Testimonials</h2>
         <p className="text-gray-500 self-start">Hear from previous clients who found their perfect homes</p>
         <div className="py-4 grid lg:grid-cols-3 md:grid-cols-2 gap-4 items-center md:justify-between w-full">
           {testimonials.map((testimonial, i) => (
             <div
               key={i}
-              className="border rounded-lg shadow-xl p-6 flex flex-col gap-8 justify-between bg-white w-full h-full"
+              className="rounded-lg shadow-xl p-6 flex flex-col gap-8 justify-between bg-white w-full h-full"
             >
               <p className="font-semibold text-[1.1em]">"{testimonial.message}"</p>
               <div className="flex items-center gap-4">
@@ -62,6 +62,11 @@ export default function Home() {
             </div>
           ))}
         </div>
+      </div>
+
+      {/* Current Listings */}
+      <div className="section__container">
+        <SlideShow />
       </div>
     </section>
   );
