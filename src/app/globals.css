@@ -3,5 +3,5 @@
 @tailwind utilities;
 
 .page__container {
-  @apply w-full max-w-[1200px] px-4 my-8 mx-auto;
+  @apply w-full max-w-[1200px] px-4 my-8 mx-auto flex flex-col gap-8;
 }

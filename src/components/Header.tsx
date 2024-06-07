@@ -1,6 +1,7 @@
-import Image from "next/image";
-import Link from "next/link";
-import React from "react";
+import Image from 'next/image';
+import Link from 'next/link';
+import React from 'react';
+import CustomButton from './CustomButton';
 
 const Header = () => {
   return (
@@ -11,7 +12,7 @@ const Header = () => {
           alt="Marissa Varzeas - Real Estate Agent"
           width={100}
           height={100}
-          className="rounded-full object-contain border border-black shadow-lg"
+          className="rounded-full object-contain border border-black shadow-lg hover:shadow-xl transition-all duration-150 ease-in-out"
         />
       </Link>
       <ul className="flex gap-8">
@@ -22,12 +23,7 @@ const Header = () => {
           <Link href="/services">Services</Link>
         </li>
         <li>
-          <Link
-            className="px-4 py-3 bg-black text-white rounded-lg hover:bg-gray-900 hover:shadow-lg transition-all duration-150 ease-in-out"
-            href="/contact"
-          >
-            Contact
-          </Link>
+          <CustomButton color="bg-black" title="Contact" href="/contact" />
         </li>
       </ul>
     </header>
