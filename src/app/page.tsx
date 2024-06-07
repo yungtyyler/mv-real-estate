@@ -39,7 +39,7 @@ export default function Home() {
       <div className="flex flex-col items-center justify-center gap-4 my-16">
         <h2 className="text-[2em] font-semibold self-start">Testimonials</h2>
         <p className="text-gray-500 self-start">Hear from previous clients who found their perfect homes</p>
-        <div className="py-4 grid lg:grid-cols-3 md:grid-cols-2 gap-4 items-center justify-between w-full">
+        <div className="py-4 grid lg:grid-cols-3 md:grid-cols-2 gap-4 items-center md:justify-between w-full">
           {testimonials.map((testimonial, i) => (
             <div
               key={i}
