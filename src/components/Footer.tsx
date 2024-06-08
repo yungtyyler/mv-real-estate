@@ -2,11 +2,11 @@ import Image from 'next/image';
 
 const Footer = () => {
   return (
-    <footer className="w-full py-6 px-4 tracking-wide backdrop-blur-xl border border-t-gray-200">
-      <div className="flex flex-col lg:gap-12 lg:flex-row lg:items-start lg:justify-between md:max-w-[1200px] mx-auto">
-        <div className="w-full py-4 lg:py-0 lg:border-none border-b border-gray-200 flex flex-col gap-4">
+    <footer className="w-full py-6 px-4 tracking-wide border-t border-gray-200 bg-white backdrop-filter backdrop-blur-lg bg-opacity-30 firefox:bg-opacity-90">
+      <div className="flex flex-col md:flex-row md:items-start md:justify-between md:max-w-[1200px] mx-auto">
+        <div className="w-full py-4 md:py-0 md:border-none border-b border-gray-200 flex flex-col gap-4">
           <Image src="/logos/mv_logo_transparent.png" alt="Logo" width={200} height={200} />
-          <div className="px-4 flex flex-col gap-2 text-gray-600">
+          <div className="flex flex-col gap-2 text-gray-600">
             <p>
               Cell:{' '}
               <a href="tel:+15623654822" className="font-bold">

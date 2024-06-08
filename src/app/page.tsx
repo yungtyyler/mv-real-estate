@@ -15,11 +15,7 @@ const testimonials: Testimonial[] = [
 
 export default function Home() {
   return (
-    <section className="page__container relative">
-      {/* Background circles */}
-      <div className="w-[800px] h-[800px] rounded-full bg-pink-gradient fixed top-[-100px] left-[-300px] -z-10" />
-      <div className="w-[800px] h-[800px] rounded-full bg-pink-gradient fixed bottom-[-500px] right-[-300px] -z-10" />
-
+    <section className="page__container">
       {/* Hero */}
       <div className="py-8 flex flex-col gap-4 items-center justify-center text-center">
         <h1 className="text-[3em] font-bold">Your Need. My Mission.</h1>

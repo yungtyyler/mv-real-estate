@@ -17,9 +17,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`relative min-h-screen flex flex-col ${poppins.className}`}>
+      <body className={`relative min-h-full flex flex-col ${poppins.className}`}>
         <Header />
-        <main className="grow relative w-full h-full flex flex-col">{children}</main>
+        <main className="w-full h-full flex flex-col relative">{children}</main>
         <Footer />
       </body>
     </html>
