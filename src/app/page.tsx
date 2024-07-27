@@ -1,4 +1,4 @@
-import { CustomButton, SlideShow } from '@/components';
+import { Hero, SlideShow } from '@/components';
 import { Testimonial } from '@/types';
 import Image from 'next/image';
 
@@ -15,24 +15,11 @@ const testimonials: Testimonial[] = [
 
 export default function Home() {
   return (
-    <section className="page__container">
-      {/* Hero */}
-      <div className="py-8 flex flex-col gap-4 items-center justify-center text-center">
-        <h1 className="text-[3em] font-bold">Your Need. My Mission.</h1>
-        <p className="text-gray-500">Your dream home, only one call away</p>
-        <CustomButton href="/about" title="Learn More" color="bg-black" />
-        <Image
-          src="https://picsum.photos/1280/640"
-          alt="Home Image"
-          width={1280}
-          height={640}
-          priority
-          className="object-cover rounded-lg mt-8"
-        />
-      </div>
+    <section className="w-full">
+      <Hero />
 
       {/* Testimonials */}
-      <div className="section__container">
+      <div className="page__container bg-coral">
         <h2 className="text-[2em] font-semibold self-start">Testimonials</h2>
         <p className="text-gray-500 self-start">Hear from previous clients who found their perfect homes</p>
         <div className="py-4 grid lg:grid-cols-3 md:grid-cols-2 gap-4 items-center md:justify-between w-full">

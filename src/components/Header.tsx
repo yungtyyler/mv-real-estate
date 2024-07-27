@@ -1,31 +1,52 @@
-import Image from 'next/image';
+'use client';
+
 import Link from 'next/link';
-import React from 'react';
-import CustomButton from './CustomButton';
+import { RefObject, useEffect, useRef } from 'react';
 
 const Header = () => {
+  const headerRef: RefObject<HTMLDivElement> = useRef(null);
+
+  useEffect(() => {
+    if (headerRef.current === null) return;
+
+    const handleScroll = (headerRef: RefObject<HTMLDivElement>) => {
+      if (headerRef.current === null) return;
+      const header = headerRef.current;
+      const scrollPosition = window.scrollY;
+      if (scrollPosition > header.offsetTop) {
+        header.classList.add('bg-white', 'shadow');
+        header.classList.remove('text-white', 'bg-transparent');
+      } else {
+        header.classList.add('text-white', 'bg-transparent');
+        header.classList.remove('bg-white', 'shadow');
+      }
+    };
+
+    window.addEventListener('scroll', () => handleScroll(headerRef));
+    return () => window.removeEventListener('scroll', () => handleScroll(headerRef));
+  }, [headerRef]);
+
   return (
-    <header className="w-full flex items-center justify-between p-4 max-w-[1200px] mx-auto bg-transparent">
-      <Link href="/">
-        <Image
-          src="/logos/initial_logo.png"
-          alt="Marissa Varzeas - Real Estate Agent"
-          width={100}
-          height={100}
-          className="rounded-full object-contain border border-black shadow-lg hover:shadow-xl transition-all duration-150 ease-in-out"
-        />
-      </Link>
-      <ul className="flex gap-8">
-        <li className="hover:text-gray-800">
-          <Link href="/about">About</Link>
-        </li>
-        <li className="hover:text-gray-800">
-          <Link href="/services">Services</Link>
-        </li>
-        <li>
-          <CustomButton color="bg-black" title="Contact" href="/contact" />
-        </li>
-      </ul>
+    <header
+      className="bg-transparent fixed w-full z-50 transition-all ease-in-out duration-300 uppercase"
+      ref={headerRef}
+    >
+      <div className="max-w-[1200px] py-4 mx-auto flex items-center justify-between">
+        <Link href="/" className="uppercase text-[3rem]">
+          Marissa Varzeas
+        </Link>
+        <ul className="flex gap-8">
+          <li className="hover:">
+            <Link href="/about">About</Link>
+          </li>
+          <li className="hover:text-gray-800">
+            <Link href="/services">Services</Link>
+          </li>
+          <li>
+            <Link href="/contact">Contact</Link>
+          </li>
+        </ul>
+      </div>
     </header>
   );
 };

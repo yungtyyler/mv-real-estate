@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import './globals.css';
 import { Footer, Header } from '@/components';
-import { poppins } from '@/fonts';
+import { cardo, cormorant } from '@/fonts';
 
 export const metadata: Metadata = {
   title: 'Marissa Varzeas - Real Estate Agent',
@@ -17,7 +17,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`relative min-h-full flex flex-col ${poppins.className}`}>
+      <body className={`relative min-h-full flex flex-col ${cormorant.className} tracking-widest font-extralight`}>
         <Header />
         <main className="w-full h-full flex flex-col relative">{children}</main>
         <Footer />

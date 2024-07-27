@@ -15,6 +15,10 @@ const config: Config = {
         "pink-gradient":
           "linear-gradient(180deg, #FFEDFA 0%, #FFE2F7 50%, #FFC7EF 100%)",
       },
+      colors: {
+        coral: "#F89880",
+        "golden-rod": "#FFCA38",
+      },
     },
   },
   plugins: [],
