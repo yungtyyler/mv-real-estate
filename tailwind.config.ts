@@ -18,6 +18,10 @@ const config: Config = {
       colors: {
         coral: "#F89880",
         "golden-rod": "#FFCA38",
+        "rose-quartz": "#b6a5a5",
+        sage: "#bcc8bf",
+        "dark-sage": "#7F9685",
+        "stone-driftwood": "#a4998e",
       },
     },
   },

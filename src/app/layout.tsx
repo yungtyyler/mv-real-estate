@@ -1,13 +1,12 @@
 import type { Metadata } from 'next';
 import './globals.css';
 import { Footer, Header } from '@/components';
-import { cardo, cormorant } from '@/fonts';
+import { cormorant } from '@/fonts';
 
 export const metadata: Metadata = {
   title: 'Marissa Varzeas - Real Estate Agent',
   description:
     'Marissa Varzeas is a real estate agent in the Orange County, California. She is a young, motivated, and dedicated agent who is ready to help you find your dream home.',
-  icons: '/logos/initial.ico',
 };
 
 export default function RootLayout({
