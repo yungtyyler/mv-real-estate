@@ -69,8 +69,8 @@ const Header = () => {
       ref={menuref}
     >
       <div
-        className={`absolute top-0 left-0 min-h-screen w-full bg-black ${
-          open ? 'opacity-70 z-20' : 'opacity-0 -z-50'
+        className={`absolute top-0 left-0 bg-black ${
+          open ? 'opacity-70 min-h-screen w-full' : 'opacity-0 -z-50 h-0 w-0'
         } transition-opacity ease-in-out duration-300`}
       />
       <Sidebar handleClick={handleClick} menuref={menuref} navLinks={NavLinks} open={open} />

@@ -1,4 +1,4 @@
-import { NavLink, Testimonial } from '@/types';
+import { NavLink } from '@/types';
 
 export { default as Header } from './layouts/Header';
 export { default as Footer } from './layouts/Footer';
