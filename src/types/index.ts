@@ -13,3 +13,9 @@ export interface Slide {
   baths: number;
   sqft: number;
 }
+
+export interface NavLink {
+  href: string;
+  title: string;
+  sublinks?: NavLink[];
+}

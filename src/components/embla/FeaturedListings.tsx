@@ -100,41 +100,47 @@ const FeaturedListings = () => {
   }, [emblaApi, tweenOpacity, setTweenFactor]);
 
   return (
-    <FullWidth>
-      <div className="embla">
-        <div className="embla__viewport" ref={emblaRef}>
-          <div className="embla__container">
-            {SLIDES.map((index) => (
-              <div className="embla__slide" key={index.address}>
-                <Image
-                  className="embla__slide__img"
-                  src="/images/placeholder.png"
-                  alt="Your alt text"
-                  width={532}
-                  height={304}
+    <FullWidth className="md:my-16 my-8">
+      {SLIDES.length > 0 ? (
+        <div className="embla">
+          <div className="embla__viewport" ref={emblaRef}>
+            <div className="embla__container">
+              {SLIDES.map((index) => (
+                <div className="embla__slide" key={index.address}>
+                  <Image
+                    className="embla__slide__img"
+                    src="/images/placeholder.png"
+                    alt="Your alt text"
+                    width={532}
+                    height={304}
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="embla__controls">
+            <div className="embla__buttons">
+              <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} />
+              <NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled} />
+            </div>
+
+            <div className="embla__dots">
+              {scrollSnaps.map((_, index) => (
+                <DotButton
+                  key={index}
+                  onClick={() => onDotButtonClick(index)}
+                  className={'embla__dot'.concat(index === selectedIndex ? ' embla__dot--selected' : '')}
                 />
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
-
-        <div className="embla__controls">
-          <div className="embla__buttons">
-            <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} />
-            <NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled} />
-          </div>
-
-          <div className="embla__dots">
-            {scrollSnaps.map((_, index) => (
-              <DotButton
-                key={index}
-                onClick={() => onDotButtonClick(index)}
-                className={'embla__dot'.concat(index === selectedIndex ? ' embla__dot--selected' : '')}
-              />
-            ))}
-          </div>
-        </div>
-      </div>
+      ) : (
+        <p className="font-bold text-[1.8em] text-white text-center py-4 border-b border-white">
+          New listings coming soon!
+        </p>
+      )}
     </FullWidth>
   );
 };

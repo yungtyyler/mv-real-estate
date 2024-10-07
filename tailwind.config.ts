@@ -16,8 +16,6 @@ const config: Config = {
           "linear-gradient(180deg, #FFEDFA 0%, #FFE2F7 50%, #FFC7EF 100%)",
       },
       colors: {
-        coral: "#F89880",
-        "golden-rod": "#FFCA38",
         "rose-quartz": "#b6a5a5",
         sage: "#bcc8bf",
         "dark-sage": "#7F9685",

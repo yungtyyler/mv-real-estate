@@ -1,12 +1,12 @@
 import type { Metadata } from 'next';
 import './globals.css';
-import { Footer, Header } from '@/components';
+import { Footer, Header, META_DESCRIPTION, META_TITLE } from '@/components';
 import { cormorant } from '@/fonts';
+import FooterBanner from '@/components/layouts/FooterBanner';
 
 export const metadata: Metadata = {
-  title: 'Marissa Varzeas - Real Estate Agent',
-  description:
-    'Marissa Varzeas is a real estate agent in the Orange County, California. She is a young, motivated, and dedicated agent who is ready to help you find your dream home.',
+  title: META_TITLE,
+  description: META_DESCRIPTION,
 };
 
 export default function RootLayout({
@@ -20,6 +20,7 @@ export default function RootLayout({
         <Header />
         <main className="w-full h-full flex flex-col relative">{children}</main>
         <Footer />
+        <FooterBanner />
       </body>
     </html>
   );
