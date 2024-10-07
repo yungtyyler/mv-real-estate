@@ -64,7 +64,7 @@ const Header = () => {
             </Link>
           </li>
         </ul>
-        <Hamburger className="lg:hidden block" color="white" />
+        <Hamburger className="lg:hidden block" />
       </nav>
     </header>
   );

@@ -10,7 +10,7 @@ const FooterBanner = () => {
       <MaxWidth className="text-center">
         <p>
           Website crafted and powered by{' '}
-          <Link href="https://primewebsolutions.org" target="_blank" className="shimmer">
+          <Link href="https://primewebsolutions.org" target="_blank" className="shimmer font-bold">
             Prime Web Solutions
           </Link>
           . Copyright © {DATE_STAMP} All Rights Reserved
