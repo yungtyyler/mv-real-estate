@@ -18,6 +18,11 @@
   @apply flex flex-col items-center justify-center gap-4 my-16;
 }
 
+/* Sidebar */
+.sidebar {
+  @apply fixed top-0 bottom-0 left-0 pt-2 px-4 w-[350px] max-w-full h-screen text-center bg-stone-driftwood border-r border-white border-opacity-30 transition-all ease-in duration-300 z-[999] flex flex-col gap-4 text-white;
+}
+
 /* Footer  */
 .footer-legal-link {
   @apply first:pl-0 first:border-none px-2 border-l hover:text-gray-700 transition-all ease-in-out duration-150;

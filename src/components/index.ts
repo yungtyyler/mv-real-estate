@@ -7,7 +7,7 @@ export { default as SlideShow } from './SlideShow';
 export { default as Hero } from './Hero';
 export { default as Testimonials } from './Testimonials';
 export {
-  Hamburger,
+  HamburgerX,
   DownChevron,
   InstagramDark,
   InstagramLight,

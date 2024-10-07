@@ -16,7 +16,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`relative min-h-full flex flex-col ${cormorant.className} tracking-widest font-extralight`}>
+      <body className={`relative min-h-screen flex flex-col ${cormorant.className} tracking-widest font-extralight`}>
         <Header />
         <main className="w-full h-full flex flex-col relative">{children}</main>
         <Footer />

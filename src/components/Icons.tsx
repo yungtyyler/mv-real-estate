@@ -1,14 +1,22 @@
-export const Hamburger = ({ size = 24, className }: { size?: number; className?: string }) => {
+export const HamburgerX = ({ open = false, className }: { open: boolean; className?: string }) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 448 512"
-      width={size}
-      height={size}
-      fill="currentColor"
-      className={className && className}
+      fill="none"
+      viewBox="0 0 24 24"
+      strokeWidth={1.5}
+      stroke="currentColor"
+      className={`w-8 h-8 ${className ? className : ''}`}
     >
-      <path d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z" />
+      {/* Hamburger icon */}
+      <path
+        className={open ? 'hidden' : ''}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+      />
+      {/* X Icon */}
+      <path className={!open ? 'hidden' : ''} strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
     </svg>
   );
 };
