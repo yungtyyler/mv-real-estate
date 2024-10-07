@@ -1,10 +1,11 @@
-import { NavLink } from '@/types';
+import { NavLink, Testimonial } from '@/types';
 
 export { default as Header } from './layouts/Header';
 export { default as Footer } from './layouts/Footer';
 export { default as CustomButton } from './CustomButton';
 export { default as SlideShow } from './SlideShow';
 export { default as Hero } from './Hero';
+export { default as Testimonials } from './Testimonials';
 export {
   Hamburger,
   DownChevron,

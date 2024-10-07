@@ -3,9 +3,9 @@
 @tailwind utilities;
 
 :root {
-  --text-body: rgb(54, 49, 61);
+  --text-body: rgb(255, 255, 255);
   --text-high-contrast-rgb-value: 49, 49, 49;
-  --detail-medium-contrast: rgb(234, 234, 234);
+  --detail-medium-contrast: rgb(215, 215, 215);
   --detail-high-contrast: rgb(192, 192, 192);
   --text-high-contrast-rgb-value: 49, 49, 49;
 }
@@ -80,7 +80,7 @@
   display: block;
   height: var(--slide-height);
   width: 100%;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .embla__controls {
@@ -111,8 +111,8 @@
   padding: 0;
   margin: 0;
   box-shadow: inset 0 0 0 0.2rem var(--detail-medium-contrast);
-  width: 3.6rem;
-  height: 3.6rem;
+  width: 3rem;
+  height: 3rem;
   z-index: 1;
   border-radius: 50%;
   color: var(--text-body);
@@ -135,7 +135,7 @@
   flex-wrap: wrap;
   justify-content: flex-end;
   align-items: center;
-  margin-right: calc((2.6rem - 1.4rem) / 2 * -1);
+  margin-right: calc((2.2rem - 1.2rem) / 2 * -1);
 }
 
 .embla__dot {
@@ -150,8 +150,8 @@
   border: 0;
   padding: 0;
   margin: 0;
-  width: 2.6rem;
-  height: 2.6rem;
+  width: 2.2rem;
+  height: 2.2rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -160,8 +160,8 @@
 
 .embla__dot:after {
   box-shadow: inset 0 0 0 0.2rem var(--detail-medium-contrast);
-  width: 1.4rem;
-  height: 1.4rem;
+  width: 1.2rem;
+  height: 1.2rem;
   border-radius: 50%;
   display: flex;
   align-items: center;

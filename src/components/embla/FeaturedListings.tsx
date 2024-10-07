@@ -9,7 +9,7 @@ import { EmblaCarouselType, EmblaEventType } from 'embla-carousel';
 import { Slide } from '@/types';
 import Image from 'next/image';
 
-const TWEEN_FACTOR_BASE = 0.84;
+const TWEEN_FACTOR_BASE = 0.75;
 const numberWithinRange = (number: number, min: number, max: number): number => Math.min(Math.max(number, min), max);
 const SLIDES: Slide[] = [
   {
@@ -101,6 +101,7 @@ const FeaturedListings = () => {
 
   return (
     <FullWidth className="md:my-16 my-8">
+      <h1 className="text-center font-bold text-[2em] mb-4 uppercase text-white">Featured Listings</h1>
       {SLIDES.length > 0 ? (
         <div className="embla">
           <div className="embla__viewport" ref={emblaRef}>
