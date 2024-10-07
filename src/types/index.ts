@@ -4,3 +4,12 @@ export interface Testimonial {
   message: string;
   image: string;
 }
+
+export interface Slide {
+  address: string;
+  price: number | string;
+  city: string;
+  beds: number;
+  baths: number;
+  sqft: number;
+}
